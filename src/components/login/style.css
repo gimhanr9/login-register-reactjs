@@ -114,6 +114,15 @@ input {
     color: darkred;
 }
 
+.messageSuccess {
+    background-color: #00FF7F;
+}
+
+.messageSuccess p {
+    font-size: 15px;
+    color: #008000;
+}
+
 @keyframes show {
     0%,
     49.99% {

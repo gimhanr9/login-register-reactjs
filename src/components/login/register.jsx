@@ -14,6 +14,7 @@ export class RegisterForm extends React.Component {
       errors: {},
       redirect:null,
       registerStatus:'',
+      
     };
 
     this.handleUserNameChange = this.handleUserNameChange.bind(this);
@@ -115,9 +116,13 @@ export class RegisterForm extends React.Component {
       <div className="form-box register-container">
         <form className="loginForm" onSubmit={this.handleSubmit}>
           <h1>Register</h1>
-          <div className="message">
+
+          {this.state.registerStatus=='Register Successful!' ? (
+        <div className="messageSuccess">
           <p>{this.state.registerStatus} </p>
-        </div>
+        </div>) : <div className="message">
+          <p>{this.state.redirect} </p>
+        </div>}
 
           <input
             type="text"

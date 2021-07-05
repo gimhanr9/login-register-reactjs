@@ -1,17 +1,17 @@
 import React from 'react';
 import Axios from 'axios'
-import { Redirect } from 'react-router-dom';
-import { Home } from "./home";
 
 export class LoginForm extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       email: '',
       password:'',
       loginStatus:'',
+      
       errors: {},
-      redirect:null,
+      
     };
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -74,9 +74,6 @@ export class LoginForm extends React.Component {
 
 
   render() {
-    if (this.state.redirect) {
-      return <Redirect to={this.state.redirect} />
-    }
     
     return (
       
@@ -88,9 +85,13 @@ export class LoginForm extends React.Component {
 
         <form className="loginForm" onSubmit={this.handleSubmit}>
         <h1>Login</h1>
-        <div className="message">
+        {this.state.loginStatus=='Login successful!' ? (
+        <div className="messageSuccess">
           <p>{this.state.loginStatus} </p>
-        </div>
+        </div>) : <div className="message">
+          <p>{this.state.loginStatus} </p>
+        </div>}
+        
         
           
             
@@ -104,7 +105,6 @@ export class LoginForm extends React.Component {
             <input type="password" name="password" placeholder="Password" value={this.state.password} 
             onChange={this.handlePasswordChange} />
             <span class="text-danger">{this.state.errors.password}</span>
-         
 
           <button type="submit" className="btn-form">
             Login

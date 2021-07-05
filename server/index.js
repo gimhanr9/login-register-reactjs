@@ -29,7 +29,8 @@ app.post("/login", (req, res) => {
         if (result.length > 0) {
             bcrypt.compare(password, result[0].Password, (error, response) => {
                 if (response) {
-                    res.send({ message: "Login Successful" });
+                    res.send({ message: "Login successful!" });
+
                     //res.send(result);
                 } else {
                     res.send({ message: "Invalid Email or Password!" });

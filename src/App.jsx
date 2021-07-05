@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { LoginForm, RegisterForm, Home } from "./components/login/index";
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -23,6 +25,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="body">
+      <Router>
+        <Switch>
+          <Route exact path="/home" component={Home}/>
+
+        </Switch>
+        
+        </Router>
+      
         <div
           className={
             "container " +
