@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 import Axios from 'axios'
-
+import { Redirect } from 'react-router-dom';
+import { Home } from "./home";
 
 export class LoginForm extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ export class LoginForm extends React.Component {
       password:'',
       loginStatus:'',
       errors: {},
+      redirect:null,
     };
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -35,7 +37,7 @@ export class LoginForm extends React.Component {
       if(response.data.message){
         this.setState({loginStatus:response.data.message})
       }else{
-
+        
       }
 
     });
@@ -44,17 +46,11 @@ export class LoginForm extends React.Component {
 
   validate() {
     let email = this.state.email;
-    let password = this.state.password;
     let errors = {};
     let valid = true;
     var emailPattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
-    if (password == null || password.length == 0) {
-      valid = false;
-      errors["password"] = "Please enter a password";
-    } else if (password.length < 8) {
-      errors["password"] = "Password must contain at least 8 characters!";
-    }
+    
     if (email != null || email.length > 0) {
       if(!emailPattern.test(email)){
         valid=false;
@@ -78,6 +74,10 @@ export class LoginForm extends React.Component {
 
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
+    
     return (
       
         

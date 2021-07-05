@@ -1,5 +1,7 @@
 import React from "react";
 import Axios from "axios";
+import { Redirect } from 'react-router-dom';
+import { Home } from "./home";
 
 export class RegisterForm extends React.Component {
   constructor(props) {
@@ -10,6 +12,8 @@ export class RegisterForm extends React.Component {
       password: "",
       phone: "",
       errors: {},
+      redirect:null,
+      registerStatus:'',
     };
 
     this.handleUserNameChange = this.handleUserNameChange.bind(this);
@@ -41,7 +45,13 @@ export class RegisterForm extends React.Component {
         email: this.state.email,
         password: this.state.password,
         phone: this.state.phone,
-      }).then(() => {});
+      }).then((response) => {
+        if(response.data.message){
+          this.setState({registerStatus:response.data.message})
+        }else{
+          
+        }
+      });
     }
   };
 
@@ -98,10 +108,16 @@ export class RegisterForm extends React.Component {
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
     return (
       <div className="form-box register-container">
         <form className="loginForm" onSubmit={this.handleSubmit}>
           <h1>Register</h1>
+          <div className="message">
+          <p>{this.state.registerStatus} </p>
+        </div>
 
           <input
             type="text"

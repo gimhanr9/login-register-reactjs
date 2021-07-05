@@ -106,3 +106,41 @@
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
+
+.home-body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background-image.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-text h1,
+p {
+    color: #ffffff;
+}
+
+.welcome-text a:link,
+a:visited {
+    background-color: #32CD32;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+}

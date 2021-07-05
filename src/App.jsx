@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { LoginForm, RegisterForm } from "./components/login/index";
+import { LoginForm, RegisterForm, Home } from "./components/login/index";
 
 class App extends React.Component {
   constructor(props) {
