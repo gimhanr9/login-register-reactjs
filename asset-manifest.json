@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/login-register-reactjs/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/login-register-reactjs/static/js/main.ffed2841.chunk.js",
-    "main.js.map": "/login-register-reactjs/static/js/main.ffed2841.chunk.js.map",
-    "runtime-main.js": "/login-register-reactjs/static/js/runtime-main.a2d34cc2.js",
-    "runtime-main.js.map": "/login-register-reactjs/static/js/runtime-main.a2d34cc2.js.map",
-    "static/js/2.5a740204.chunk.js": "/login-register-reactjs/static/js/2.5a740204.chunk.js",
-    "static/js/2.5a740204.chunk.js.map": "/login-register-reactjs/static/js/2.5a740204.chunk.js.map",
-    "static/js/3.9e2fe998.chunk.js": "/login-register-reactjs/static/js/3.9e2fe998.chunk.js",
-    "static/js/3.9e2fe998.chunk.js.map": "/login-register-reactjs/static/js/3.9e2fe998.chunk.js.map",
+    "main.css": "/login-register-reactjs/static/css/main.78f1c5a6.chunk.css",
+    "main.js": "/login-register-reactjs/static/js/main.1e6742d2.chunk.js",
+    "main.js.map": "/login-register-reactjs/static/js/main.1e6742d2.chunk.js.map",
+    "runtime-main.js": "/login-register-reactjs/static/js/runtime-main.817861f2.js",
+    "runtime-main.js.map": "/login-register-reactjs/static/js/runtime-main.817861f2.js.map",
+    "static/css/2.d45d6843.chunk.css": "/login-register-reactjs/static/css/2.d45d6843.chunk.css",
+    "static/js/2.48151c8b.chunk.js": "/login-register-reactjs/static/js/2.48151c8b.chunk.js",
+    "static/js/2.48151c8b.chunk.js.map": "/login-register-reactjs/static/js/2.48151c8b.chunk.js.map",
+    "static/js/3.2ec03db2.chunk.js": "/login-register-reactjs/static/js/3.2ec03db2.chunk.js",
+    "static/js/3.2ec03db2.chunk.js.map": "/login-register-reactjs/static/js/3.2ec03db2.chunk.js.map",
     "index.html": "/login-register-reactjs/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/login-register-reactjs/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.5a740204.chunk.js.LICENSE.txt": "/login-register-reactjs/static/js/2.5a740204.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/login-register-reactjs/static/media/logo.6ce24c58.svg"
+    "static/css/2.d45d6843.chunk.css.map": "/login-register-reactjs/static/css/2.d45d6843.chunk.css.map",
+    "static/css/main.78f1c5a6.chunk.css.map": "/login-register-reactjs/static/css/main.78f1c5a6.chunk.css.map",
+    "static/js/2.48151c8b.chunk.js.LICENSE.txt": "/login-register-reactjs/static/js/2.48151c8b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/login-register-reactjs/static/media/background-image.82e6729c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a2d34cc2.js",
-    "static/js/2.5a740204.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.ffed2841.chunk.js"
+    "static/js/runtime-main.817861f2.js",
+    "static/css/2.d45d6843.chunk.css",
+    "static/js/2.48151c8b.chunk.js",
+    "static/css/main.78f1c5a6.chunk.css",
+    "static/js/main.1e6742d2.chunk.js"
   ]
 }
