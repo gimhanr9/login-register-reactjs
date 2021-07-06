@@ -46,6 +46,7 @@ export class LoginForm extends React.Component {
 
   validate() {
     let email = this.state.email;
+    let password = this.state.password;
     let errors = {};
     let valid = true;
     var emailPattern = new RegExp(
@@ -60,6 +61,10 @@ export class LoginForm extends React.Component {
     } else {
       valid = false;
       errors["email"] = "Please enter your email";
+    }
+    if (password == null || password.length == 0) {
+      valid = false;
+      errors["password"] = "Please enter a password";
     }
 
     this.setState({
