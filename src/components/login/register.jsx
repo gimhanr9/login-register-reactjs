@@ -52,6 +52,11 @@ export class RegisterForm extends React.Component {
           
         }
       });
+
+      this.setState({ userName: '' });
+      this.setState({ email: '' });
+      this.setState({ password: '' });
+      this.setState({ phone: '' });
     }
   };
 
