@@ -25,8 +25,9 @@ export class LoginForm extends React.Component {
   handlePasswordChange = (event) => {
     this.setState({ password: event.target.value });
   };
-
+  
   handleSubmit = (event) => {
+    
     event.preventDefault();
     if (this.validate()) {
       Axios.post("http://localhost:3001/login", {
@@ -67,8 +68,10 @@ export class LoginForm extends React.Component {
 
     return valid;
   }
+  
 
   render() {
+    
     return (
       <div className="form-box login-container">
         <form className="loginForm" onSubmit={this.handleSubmit}>
